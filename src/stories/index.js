@@ -9,6 +9,14 @@ import App from '../App.vue';
 import { resolve } from 'url';
 import { setTimeout } from 'timers';
 
+import Flex from '../components/LeftStaticRightAuto/Flex.vue';
+import Float from '../components/LeftStaticRightAuto/Float.vue';
+import Float2 from '../components/LeftStaticRightAuto/Float2.vue';
+
+import FloatPosition from '../components/LeftRightEqualHeight/FloatPosition.vue';
+import FloatPosition2 from '../components/LeftRightEqualHeight/FloatPosition2.vue';
+import TwoColBorder from '../components/LeftRightEqualHeight/TwoColBorder.vue';
+
 storiesOf('App', module)
   .addDecorator(Centered)
   .add('App', () => ({
@@ -82,3 +90,28 @@ storiesOf('Button used in test', module)
     }
   }))
 
+// 左侧定宽，右侧自适应
+// 左右两列等高布局
+// 左右两列要求有最小高度，例如：200px;（当内容超出200时，会自动以等高的方式增高)
+
+storiesOf('左侧定宽，右侧自适应', module)
+  .add('flex', () => ({
+    render: h => h(Flex)
+  }))
+  .add('float + marginLeft', () => ({
+    render: h => h(Float)
+  }))
+  .add('float + marginLeft 2', () => ({
+    render: h => h(Float2)
+  }));
+
+storiesOf('左右两列 等高布局', module)
+  .add('float + marginLeft', () => ({
+    render: h => h(FloatPosition)
+  }))
+  .add('float + marginLeft 2', () => ({
+    render: h => h(FloatPosition2)
+  }))
+  .add('with border', () => ({
+    render: h => h(TwoColBorder)
+  }))
