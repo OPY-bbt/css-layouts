@@ -17,6 +17,8 @@ import FloatPosition from '../components/LeftRightEqualHeight/FloatPosition.vue'
 import FloatPosition2 from '../components/LeftRightEqualHeight/FloatPosition2.vue';
 import TwoColBorder from '../components/LeftRightEqualHeight/TwoColBorder.vue';
 
+import center from '../components/center/vertical.vue';
+
 storiesOf('App', module)
   .addDecorator(Centered)
   .add('App', () => ({
@@ -115,3 +117,9 @@ storiesOf('左右两列 等高布局', module)
   .add('with border', () => ({
     render: h => h(TwoColBorder)
   }))
+
+storiesOf('居中', module)
+  .addDecorator(Centered)
+  .add('vertical', () => ({
+    render: h => h(center)
+  }));
