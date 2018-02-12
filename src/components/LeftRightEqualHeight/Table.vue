@@ -1,7 +1,7 @@
 <template>
   <div class="container3">
-      <div class="col1" style="width: 100px"></div>
-      <div class="col2" style="width: 200px"></div>
+      <div class="col1"></div>
+      <div class="col2"></div>
       <div class="col3"></div>
   </div>
 </template>
@@ -17,12 +17,11 @@
   }
   .col1 {
     background: green;
-    /* width: 100px; */
     height: 300px;
   }
   .col2 {
     background: orange;
-    /* width: 150px; */
+    width: 150px;
     height: 400px;
   }
   .col3 {
